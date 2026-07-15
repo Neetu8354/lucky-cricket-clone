@@ -150,11 +150,11 @@ const GamePageTemplate = ({
         )}
 
         <section className="rounded-2xl border hairline bg-card/40 p-8 text-center">
-          <h2 className="text-2xl font-bold mb-2">Ready to play {h1}?</h2>
-          <p className="text-muted-foreground mb-5">Get your YOLO365 ID on WhatsApp in 60 seconds — instant UPI deposit, 5-min withdrawal.</p>
-          <button onClick={openWhatsApp} aria-label="Get YOLO365 betting ID on WhatsApp" className="px-7 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
-            Get ID on WhatsApp
-          </button>
+          <h2 className="text-2xl font-bold mb-2">Play responsibly</h2>
+          <p className="text-muted-foreground mb-5">Set a budget, take breaks, and never chase losses. Gaming should be treated as entertainment.</p>
+          <Link to="/responsible-gaming" className="inline-flex items-center justify-center px-7 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
+            Responsible gaming information
+          </Link>
         </section>
       </main>
       <Footer />
