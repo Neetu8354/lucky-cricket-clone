@@ -14,7 +14,7 @@ type Props = {
 
 const SITE = "https://yolo365bet24.live";
 
-const SEO = ({ title, description, canonical, image = `${SITE}/og-image.jpg`, type = "website", publishedTime, modifiedTime, keywords, jsonLd }: Props) => {
+const SEO = ({ title, description, canonical, image = `${SITE}/og-image.jpg`, type = "website", publishedTime, modifiedTime, jsonLd }: Props) => {
   const url = canonical.startsWith("http") ? canonical : `${SITE}${canonical}`;
   const imgUrl = image.startsWith("http") ? image : `${SITE}${image}`;
   const ldArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
@@ -22,7 +22,6 @@ const SEO = ({ title, description, canonical, image = `${SITE}/og-image.jpg`, ty
     <Helmet prioritizeSeoTags>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={url} />
 
       <meta property="og:title" content={title} />

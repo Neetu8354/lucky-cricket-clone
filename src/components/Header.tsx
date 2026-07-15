@@ -47,16 +47,16 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button onClick={openWhatsApp} className="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-md text-foreground/60 hover:text-gold transition-colors" aria-label="Search">
+          <button onClick={openWhatsApp} className="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-md text-foreground/60 hover:text-gold transition-colors" aria-label="Contact YOLO365 support">
             <Search className="w-4 h-4" />
           </button>
-          <button onClick={openWhatsApp} className="hidden md:inline-flex items-center gap-2 px-4 h-9 rounded-md border hairline text-foreground/85 hover:text-gold hover:border-gold/40 text-sm font-medium transition-colors">
+          <button onClick={openWhatsApp} aria-label="Log in to YOLO365 via WhatsApp" className="hidden md:inline-flex items-center gap-2 px-4 h-9 rounded-md border hairline text-foreground/85 hover:text-gold hover:border-gold/40 text-sm font-medium transition-colors">
             <User className="w-4 h-4" /> Login
           </button>
-          <button onClick={openWhatsApp} className="inline-flex items-center gap-2 px-4 h-9 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+          <button onClick={openWhatsApp} aria-label="Get YOLO365 betting ID on WhatsApp" className="inline-flex items-center gap-2 px-4 h-9 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
             <MessageCircle className="w-4 h-4" /> Get ID
           </button>
-          <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground/80">
+          <button onClick={() => setOpen(!open)} aria-label={open ? "Close navigation menu" : "Open navigation menu"} className="lg:hidden p-2 text-foreground/80">
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>

@@ -12,7 +12,9 @@ export type GamePageProps = {
   slug: string;
   title: string;
   description: string;
-  keywords: string;
+  keywords?: string;
+  benefitsHeading?: string;
+  howItWorksHeading?: string;
   h1: string;
   intro: string;
   highlights: { title: string; desc: string }[];
@@ -25,7 +27,7 @@ export type GamePageProps = {
 };
 
 const GamePageTemplate = ({
-  slug, title, description, keywords, h1, intro,
+  slug, title, description, benefitsHeading, howItWorksHeading, h1, intro,
   highlights, howToPlay, strategyTitle, strategy, faqs, relatedSlugs = [], imageAlt,
 }: GamePageProps) => {
   const url = `${SITE}/games/${slug}`;
@@ -58,22 +60,11 @@ const GamePageTemplate = ({
         acceptedAnswer: { "@type": "Answer", text: f.a },
       })),
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      name: `How to play ${h1} on YOLO365`,
-      step: howToPlay.map((s, i) => ({
-        "@type": "HowToStep",
-        position: i + 1,
-        name: `Step ${i + 1}`,
-        text: s,
-      })),
-    },
   ];
 
   return (
     <div className="min-h-screen">
-      <SEO title={title} description={description} canonical={`/games/${slug}`} keywords={keywords} jsonLd={ld} image={`${SITE}/og-image.jpg`} />
+      <SEO title={title} description={description} canonical={`/games/${slug}`} jsonLd={ld} image={`${SITE}/og-image.jpg`} />
       <Header />
       <main className="container py-12">
         <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground mb-5">
@@ -86,7 +77,7 @@ const GamePageTemplate = ({
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">{h1}</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">{intro}</p>
           <div className="mt-6 flex gap-3">
-            <button onClick={openWhatsApp} className="inline-flex items-center gap-2 px-6 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
+            <button onClick={openWhatsApp} aria-label="Get YOLO365 betting ID on WhatsApp" className="inline-flex items-center gap-2 px-6 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
               <MessageCircle className="w-4 h-4" /> Get ID on WhatsApp
             </button>
             <Link to="/blog" className="inline-flex items-center px-6 h-12 rounded-md border hairline hover:border-gold/40 font-medium">Read tips</Link>
@@ -103,7 +94,7 @@ const GamePageTemplate = ({
         </header>
 
         <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Why play {h1} on YOLO365</h2>
+          <h2 className="text-2xl font-bold mb-6">{benefitsHeading ?? `Why choose ${h1}`}</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {highlights.map((h) => (
               <div key={h.title} className="p-6 rounded-xl border hairline bg-card/40">
@@ -116,7 +107,7 @@ const GamePageTemplate = ({
         </section>
 
         <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">How to play {h1} on YOLO365</h2>
+          <h2 className="text-2xl font-bold mb-6">{howItWorksHeading ?? `How ${h1} works`}</h2>
           <ol className="space-y-3 max-w-3xl">
             {howToPlay.map((s, i) => (
               <li key={i} className="flex gap-3 p-4 rounded-md border hairline bg-card/30">
@@ -160,7 +151,7 @@ const GamePageTemplate = ({
         <section className="rounded-2xl border hairline bg-card/40 p-8 text-center">
           <h2 className="text-2xl font-bold mb-2">Ready to play {h1}?</h2>
           <p className="text-muted-foreground mb-5">Get your YOLO365 ID on WhatsApp in 60 seconds — instant UPI deposit, 5-min withdrawal.</p>
-          <button onClick={openWhatsApp} className="px-7 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
+          <button onClick={openWhatsApp} aria-label="Get YOLO365 betting ID on WhatsApp" className="px-7 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
             Get ID on WhatsApp
           </button>
         </section>
