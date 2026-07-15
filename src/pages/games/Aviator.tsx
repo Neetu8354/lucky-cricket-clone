@@ -3,38 +3,39 @@ import GamePageTemplate from "./GamePageTemplate";
 const Aviator = () => (
   <GamePageTemplate
     slug="aviator"
-    title="Aviator Game Online India — Play Real Money Crash on YOLO365"
-    description="Play Aviator crash game online for real INR money on YOLO365 — Spribe original, 97% RTP, ₹10 min bet, auto cashout, instant UPI deposit & withdrawal."
-    keywords="Aviator game online India, Aviator real money, Spribe Aviator, Aviator crash game, Aviator UPI deposit, how to win Aviator YOLO365"
-    h1="Aviator Crash Game — Real Money Online"
-    intro="Play the original Aviator crash game by Spribe on YOLO365 for real INR money. 97% RTP, ₹10 minimum bet, dual-bet auto cashout, provably fair — and the fastest growing crash game in India with thousands of players in every round."
-    imageAlt="Aviator crash game online real money on yolo365bet24.live with multiplier curve"
+    title="Aviator Game Online India 2026 | Rules, Features & Live Crash Game"
+    description="Learn how Aviator crash game works, gameplay features, betting rules, auto cashout options and responsible gaming information on YOLO365."
+    h1="Aviator Game Online India: Crash Game Guide & Features"
+    intro="Learn how the Aviator crash-game format works, including multiplier rounds, cashout options, table features, and responsible gaming practices."
+    imageAlt="Aviator crash game interface showing a rising multiplier curve"
+    seoImage="/images/aviator-og.jpg"
     highlights={[
-      { title: "97% RTP — provably fair", desc: "Highest-payout crash game in India with verifiable round results." },
-      { title: "₹10 minimum bet", desc: "Start with as little as ₹10 — perfect for learning the rhythm." },
-      { title: "Dual bet + auto cashout", desc: "Run two bets per round with separate auto-cashout multipliers." },
+      { title: "Multiplier rounds", desc: "Each round displays a multiplier that rises until the round ends." },
+      { title: "Cashout options", desc: "Review the available manual and automatic cashout controls before joining a round." },
+      { title: "Responsible gaming", desc: "Set a budget, understand the risks, and use only funds you can afford to lose." },
     ]}
     howToPlay={[
-      "Get your YOLO365 ID on WhatsApp in 60 seconds.",
-      "Deposit ₹100+ via UPI for instant credit.",
-      "Open Casino → Spribe → Aviator.",
-      "Set your bet amount (₹10 to ₹1 lakh) and optional auto-cashout multiplier.",
-      "Plane takes off — multiplier rises from 1.00× upward.",
-      "Cash out before the plane flies away to lock in winnings.",
+      "Review the game rules, controls, and table terms before participating.",
+      "Set an entertainment budget and do not exceed it.",
+      "Choose a round and review the available cashout options.",
+      "Understand that the multiplier can stop at any time.",
+      "Take breaks and use responsible gaming tools when needed.",
     ]}
-    strategyTitle="How to win Aviator: the 1.5× strategy"
+    strategyTitle="Aviator game rules and responsible gaming guidance"
+    benefitsHeading="Aviator Crash Game Features"
+    howItWorksHeading="How Aviator Works"
     strategy={
       <>
-        <p>The most consistent <strong>Aviator strategy</strong> is the 1.5× auto-cashout: set both bets to auto-cashout at 1.5× and you win 67% of rounds for a small but steady profit curve. Mathematically it's near-breakeven, but combined with bonus rounds and YOLO365 cashback it edges into positive expected value.</p>
-        <p>Aggressive players use the "Martingale-lite" — double stake after every loss, reset after a 2× cashout. It works in short sessions but blows up in long droughts, so cap your loss streak at 5 doubles maximum.</p>
-        <p>Never chase a high multiplier — the plane crashes randomly and 100×+ rounds happen less than 1% of the time. Set your auto-cashout, walk away from the screen, and let the math work.</p>
+        <p>Aviator rounds are unpredictable. Players may choose different approaches, but no approach can guarantee a result or profit.</p>
+        <p>Review the table controls and cashout options before participating. Avoid increasing stakes to recover prior losses.</p>
+        <p>Set a time and spending limit, take regular breaks, and visit our <a href="/responsible-gaming" className="text-gold underline">responsible gaming information</a> if the activity stops being enjoyable.</p>
       </>
     }
     faqs={[
-      { q: "Is Aviator rigged?", a: "No. Aviator by Spribe uses provably fair cryptographic verification — every round seed is publishable and verifiable. RTP is independently audited at 97%." },
-      { q: "What's the maximum win on Aviator?", a: "The multiplier is theoretically uncapped but the maximum payout per bet is ₹1 crore on YOLO365." },
-      { q: "Can I play Aviator on mobile?", a: "Yes. Aviator runs in your mobile browser — no app download needed. Works on Android and iOS." },
-      { q: "What's the best Aviator bet size?", a: "Never stake more than 1% of your bankroll per round. With auto-cashout at 1.5×, even ₹100 bets compound steadily over 100+ rounds." },
+      { q: "How does Aviator work?", a: "Aviator uses a crash-game format in which a displayed multiplier rises until the round ends. Review the applicable game rules and provider information before participating." },
+      { q: "What is auto cashout?", a: "Auto cashout is an optional setting that can close a position at a selected multiplier if the round reaches it. Availability and rules can vary by table." },
+      { q: "Can I access Aviator on mobile?", a: "Check the current platform and table requirements for supported mobile access and available features." },
+      { q: "What is responsible gaming?", a: "Set a budget, treat participation as entertainment, and never chase losses. Outcomes are unpredictable and no strategy guarantees a profit." },
     ]}
     relatedSlugs={[
       { slug: "teen-patti", label: "Teen Patti Live" },
