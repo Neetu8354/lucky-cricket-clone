@@ -23,12 +23,16 @@ const SEO = ({ title, description, canonical, image = `${SITE}/og-image.jpg`, ty
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      <link rel="alternate" hrefLang="en-IN" href={url} />
+      <link rel="alternate" hrefLang="x-default" href={url} />
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:image" content={imgUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="YOLO365" />
       <meta property="og:locale" content="en_IN" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}

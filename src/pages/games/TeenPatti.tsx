@@ -3,38 +3,39 @@ import GamePageTemplate from "./GamePageTemplate";
 const TeenPatti = () => (
   <GamePageTemplate
     slug="teen-patti"
-    title="Teen Patti Online Real Money India 2026 | YOLO365 Live Casino"
-    description="Play Teen Patti online for real money on YOLO365 — live dealers from Evolution & Ezugi, ₹100 min bet, instant UPI deposit, 5-minute INR withdrawal."
-    keywords="Teen Patti online real money, Teen Patti live India, 3 Patti online betting, Teen Patti UPI deposit, live Teen Patti YOLO365, online 3 Patti India"
-    h1="Teen Patti Online Live — Real Money"
-    intro="Play Teen Patti online for real INR money on YOLO365 with live dealers streaming 24×7 from Evolution Gaming and Ezugi studios. Classic 3 Patti, Joker variant, AB side bets, ₹100 minimum stake — and instant UPI cashout in under 5 minutes."
-    imageAlt="Live Teen Patti online real money game on yolo365bet24.live with Indian dealer"
+    title="Teen Patti Online India 2026 | Live 3 Patti Game Guide - YOLO365"
+    description="Explore Teen Patti online rules, variants, live tables and gameplay information on YOLO365. Learn classic 3 Patti formats, table options and responsible gaming practices."
+    h1="Teen Patti Online: Live 3 Patti Game Guide"
+    intro="Explore Teen Patti game formats, hand rankings, table options, and responsible gaming information for eligible users."
+    imageAlt="Live Teen Patti table with cards and dealer interface"
+    seoImage="/images/teen-patti-og.jpg"
     highlights={[
-      { title: "Live Indian dealers", desc: "24×7 streams from Evolution & Ezugi studios with Hindi-speaking dealers." },
-      { title: "₹100 minimum bet", desc: "Start tiny, scale up to ₹2 lakh per hand on VIP tables." },
-      { title: "Side bets pay big", desc: "Pair Plus, AB bonus, and Bonus side bets unlock 100×+ payouts." },
+      { title: "Teen Patti rules", desc: "Learn the basic round flow, betting decisions, and common table terminology." },
+      { title: "Hand rankings", desc: "Understand the order of Teen Patti hands before participating in a table." },
+      { title: "Responsible gaming", desc: "Set a budget, understand the risks, and use only funds you can afford to lose." },
     ]}
     howToPlay={[
-      "Get your YOLO365 ID on WhatsApp (60 seconds).",
-      "Deposit ₹100+ via UPI — credited instantly.",
-      "Open Live Casino → Teen Patti and pick a table by stake.",
-      "Place your Ante bet before cards are dealt.",
-      "Decide to Play (2× Ante) or Fold after seeing your three cards.",
-      "Highest hand wins — Trail (three of a kind) is the top hand.",
+      "Review the table rules and hand rankings before joining a game.",
+      "Set an entertainment budget and do not exceed it.",
+      "Choose a table whose rules and stake level you understand.",
+      "Review your cards and the available decisions for that round.",
+      "Take breaks and use responsible gaming tools when needed.",
     ]}
-    strategyTitle="Teen Patti strategy: when to Play and when to Fold"
+    strategyTitle="Teen Patti rules and responsible gaming guidance"
+    benefitsHeading="Teen Patti Rules Explained"
+    howItWorksHeading="How Teen Patti Works"
     strategy={
       <>
-        <p>The math on <strong>Teen Patti online real money</strong> is straightforward: fold any hand worse than Q-7-2 unseen, and always Play with a Pair or higher. The classic mistake is playing weak high-card hands — long-term they bleed your bankroll.</p>
-        <p>Pair Plus is a sucker bet at most stakes (house edge ~7%) but the AB Bonus side bet on YOLO365 has near-zero edge during specific dealer up-cards. Always check the paytable before betting — Evolution and Ezugi run slightly different versions.</p>
-        <p>Read our <a href="/blog/teen-patti-online-real-money-india-yolo365" className="text-gold underline">full Teen Patti strategy guide</a> for advanced bankroll splits and side-bet expected value tables.</p>
+        <p>Teen Patti hand rankings generally place Trail, Pure Sequence, Sequence, Colour, Pair, and High Card in descending order. Always check the specific rules displayed at the table because formats can vary.</p>
+        <p>Table rules, available decisions, and side bets vary by variant. Review the paytable and terms before making a decision.</p>
+        <p>Read our <a href="/blog/teen-patti-online-real-money-india-yolo365" className="text-gold underline">Teen Patti guide</a> and <a href="/responsible-gaming" className="text-gold underline">responsible gaming information</a> before participating.</p>
       </>
     }
     faqs={[
-      { q: "Is Teen Patti online legal in India?", a: "Teen Patti is widely played in India and offshore live casinos like YOLO365 accept Indian players. Some states restrict online gambling — check your state laws before playing." },
-      { q: "Can I play Teen Patti for real INR money?", a: "Yes. Deposit via UPI (PhonePe, GPay, Paytm), play in INR at all stake levels from ₹100 to ₹2 lakh per hand, and withdraw winnings in INR within 5 minutes." },
-      { q: "Which Teen Patti variant has the best odds?", a: "Classic Teen Patti has the lowest house edge (~3.5%). Joker and Bonus variants are more entertaining but carry slightly higher edge (~5%)." },
-      { q: "Are the live dealers real?", a: "Yes. All YOLO365 Teen Patti tables stream from licensed Evolution Gaming and Ezugi studios with verified live dealers — no RNG." },
+      { q: "Is Teen Patti online legal in India?", a: "Laws and regulations vary by state. You are responsible for checking the laws that apply where you live before participating." },
+      { q: "What are the Teen Patti hand rankings?", a: "Common hand rankings include Trail, Pure Sequence, Sequence, Colour, Pair, and High Card. Check the table rules because formats can vary." },
+      { q: "Which Teen Patti variant should I choose?", a: "Choose a variant only after reviewing its rules, side bets, and table terms. House edge varies by Teen Patti variant and table rules." },
+      { q: "What is responsible gaming?", a: "Set a budget, treat participation as entertainment, and never chase losses. Take breaks or seek support if it stops being enjoyable." },
     ]}
     relatedSlugs={[
       { slug: "andar-bahar", label: "Andar Bahar" },

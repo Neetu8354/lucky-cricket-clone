@@ -24,11 +24,12 @@ export type GamePageProps = {
   faqs: { q: string; a: string }[];
   relatedSlugs?: { slug: string; label: string }[];
   imageAlt: string;
+  seoImage?: string;
 };
 
 const GamePageTemplate = ({
   slug, title, description, benefitsHeading, howItWorksHeading, h1, intro,
-  highlights, howToPlay, strategyTitle, strategy, faqs, relatedSlugs = [], imageAlt,
+  highlights, howToPlay, strategyTitle, strategy, faqs, relatedSlugs = [], imageAlt, seoImage = `${SITE}/og-image.jpg`,
 }: GamePageProps) => {
   const url = `${SITE}/games/${slug}`;
   const ld = [
@@ -64,7 +65,7 @@ const GamePageTemplate = ({
 
   return (
     <div className="min-h-screen">
-      <SEO title={title} description={description} canonical={`/games/${slug}`} jsonLd={ld} image={`${SITE}/og-image.jpg`} />
+      <SEO title={title} description={description} canonical={`/games/${slug}`} jsonLd={ld} image={seoImage} />
       <Header />
       <main className="container py-12">
         <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground mb-5">
@@ -83,7 +84,7 @@ const GamePageTemplate = ({
             <Link to="/blog" className="inline-flex items-center px-6 h-12 rounded-md border hairline hover:border-gold/40 font-medium">Read tips</Link>
           </div>
           <img
-            src="/og-image.jpg"
+            src={seoImage}
             alt={imageAlt}
             width={1200}
             height={630}

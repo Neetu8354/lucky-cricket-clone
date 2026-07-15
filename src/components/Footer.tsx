@@ -4,14 +4,11 @@ import { MessageCircle, Mail, Clock } from "lucide-react";
 import { posts } from "@/blog/posts";
 
 const Footer = () => {
-  const cols: Record<string, { label: string; href?: string }[]> = {
+  const cols: Record<string, { label: string; href: string }[]> = {
     "Sports": [
       { label: "Cricket Betting", href: "/games/cricket-betting" },
       { label: "IPL 2026 Betting", href: "/blog/ipl-2026-betting-tips-yolo365" },
       { label: "Pro Kabaddi", href: "/blog/kabaddi-betting-yolo365-pro-kabaddi-league" },
-      { label: "Tennis" },
-      { label: "Horse Racing" },
-      { label: "Esports" },
     ],
     "Casino": [
       { label: "Teen Patti", href: "/games/teen-patti" },
@@ -19,7 +16,6 @@ const Footer = () => {
       { label: "Aviator", href: "/games/aviator" },
       { label: "Live Roulette", href: "/blog/online-roulette-india-strategy" },
       { label: "Dragon Tiger", href: "/blog/dragon-tiger-live-casino-india" },
-      { label: "Slots" },
     ],
     "Company": [
       { label: "About Us", href: "/about" },
@@ -59,11 +55,7 @@ const Footer = () => {
               <ul className="space-y-2.5">
                 {links.map((l) => (
                   <li key={l.label}>
-                    {l.href ? (
-                      <Link to={l.href} className="text-sm text-muted-foreground hover:text-gold transition-colors">{l.label}</Link>
-                    ) : (
-                      <button onClick={openWhatsApp} className="text-sm text-muted-foreground hover:text-gold transition-colors text-left">{l.label}</button>
-                    )}
+                    <Link to={l.href} className="text-sm text-muted-foreground hover:text-gold transition-colors">{l.label}</Link>
                   </li>
                 ))}
               </ul>
