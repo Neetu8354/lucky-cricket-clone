@@ -8,11 +8,10 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://yolo365bet24.live/" />
-    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://yolo365bet24.live/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yolo365bet24.live/" />
     <image:image>
       <image:loc>https://yolo365bet24.live/og-image.jpg</image:loc>
-      <image:title>YOLO365 — India's #1 Cricket Betting & Live Casino</image:title>
+      <image:title>YOLO365 gaming information</image:title>
     </image:image>
   </url>
   <url>
@@ -26,24 +25,6 @@
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://yolo365bet24.live/terms</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://yolo365bet24.live/privacy</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://yolo365bet24.live/responsible-gaming</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yolo365bet24.live/games/cricket-betting</loc>
@@ -134,5 +115,35 @@
     <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yolo365bet24.live/terms</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://yolo365bet24.live/privacy</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://yolo365bet24.live/responsible-gaming</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yolo365bet24.live/editorial-policy</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://yolo365bet24.live/author/yolo365-editorial-team</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

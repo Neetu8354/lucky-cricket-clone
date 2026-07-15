@@ -14,6 +14,8 @@ const Contact = lazy(() => import("./pages/Contact.tsx"));
 const Terms = lazy(() => import("./pages/Terms.tsx"));
 const Privacy = lazy(() => import("./pages/Privacy.tsx"));
 const ResponsibleGaming = lazy(() => import("./pages/ResponsibleGaming.tsx"));
+const EditorialPolicy = lazy(() => import("./pages/EditorialPolicy.tsx"));
+const AuthorEditorialTeam = lazy(() => import("./pages/AuthorEditorialTeam.tsx"));
 const Cricket = lazy(() => import("./pages/games/Cricket.tsx"));
 const TeenPatti = lazy(() => import("./pages/games/TeenPatti.tsx"));
 const Aviator = lazy(() => import("./pages/games/Aviator.tsx"));
@@ -39,6 +41,8 @@ const App = () => (
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/responsible-gaming" element={<ResponsibleGaming />} />
+              <Route path="/editorial-policy" element={<EditorialPolicy />} />
+              <Route path="/author/yolo365-editorial-team" element={<AuthorEditorialTeam />} />
               <Route path="/games/cricket-betting" element={<Cricket />} />
               <Route path="/games/teen-patti" element={<TeenPatti />} />
               <Route path="/games/aviator" element={<Aviator />} />

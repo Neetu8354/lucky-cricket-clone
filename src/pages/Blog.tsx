@@ -16,16 +16,21 @@ const Blog = () => {
     "@context": "https://schema.org",
     "@type": "Blog",
     "@id": `${SITE}/blog#blog`,
-    name: "YOLO365 Blog — Cricket Betting, IPL Tips & Live Casino Strategy",
+    name: "YOLO365 Blog | Cricket Insights, Game Guides & Responsible Gaming Articles",
     url: `${SITE}/blog`,
-    publisher: { "@type": "Organization", name: "YOLO365", url: SITE },
+    publisher: { "@id": `${SITE}/#organization` },
     blogPost: posts.map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
       url: `${SITE}/blog/${p.slug}`,
       datePublished: p.date,
       dateModified: p.updated,
-      author: { "@type": "Organization", name: "YOLO365" },
+      author: {
+        "@type": "Person",
+        "@id": `${SITE}/author/yolo365-editorial-team#person`,
+        name: "YOLO365 Editorial Team",
+        url: `${SITE}/author/yolo365-editorial-team`,
+      },
     })),
   };
 
@@ -41,10 +46,9 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="YOLO365 Blog — IPL Betting Tips, Cricket Strategy & Live Casino Guides 2026"
-        description="Expert IPL 2026 betting tips, cricket strategy, Teen Patti & live casino guides from YOLO365 — India's #1 cricket betting exchange. New articles every week."
+        title="YOLO365 Blog | Cricket Insights, Game Guides & Responsible Gaming Articles"
+        description="Explore YOLO365 guides covering cricket analysis, casino game information, rules, strategies and responsible gaming insights."
         canonical="/blog"
-        keywords="cricket betting blog, IPL betting tips, teen patti strategy, live casino guide india, yolo365 blog"
         jsonLd={[jsonLd, breadcrumbLd]}
       />
       <Header />
@@ -56,10 +60,10 @@ const Blog = () => {
         <header className="max-w-3xl mb-10">
           <div className="eyebrow mb-2">YOLO365 Insights</div>
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
-            Cricket betting tips, <span className="text-gold">IPL strategy</span> & live casino guides
+            YOLO365 Gaming Guides, <span className="text-gold">Cricket Insights</span> & Strategy Articles
           </h1>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-            Long-form, data-backed articles from India's #1 cricket betting exchange. Every guide is written by punters who actually bet — not affiliates.
+            Research-driven articles covering cricket analysis, game rules, odds concepts and responsible gaming practices.
           </p>
         </header>
 
@@ -79,7 +83,7 @@ const Blog = () => {
           {filtered.map((p) => (
             <article key={p.slug} className="group border hairline rounded-lg overflow-hidden bg-card/40 hover:border-gold/40 transition-colors flex flex-col">
               <Link to={`/blog/${p.slug}`} className="block aspect-[16/9] overflow-hidden bg-muted">
-                <img src={p.cover} alt={`${p.title} — YOLO365 cricket betting & live casino blog`} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width={640} height={360} />
+                <img src={p.cover} alt={`${p.category} article featured image`} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width={640} height={360} />
               </Link>
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-center gap-2 text-[10px] text-muted-foreground uppercase tracking-wider mb-3">

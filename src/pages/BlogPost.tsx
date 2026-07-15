@@ -4,8 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { posts } from "@/blog/posts";
-import { Calendar, Clock, ArrowLeft, MessageCircle } from "lucide-react";
-import { openWhatsApp } from "@/lib/wa";
+import { Calendar, Clock, ArrowLeft } from "lucide-react";
 
 const SITE = "https://yolo365bet24.live";
 
@@ -85,7 +84,12 @@ const BlogPost = () => {
     image: [`${SITE}${post.cover.replace("/src/assets", "/assets")}`],
     datePublished: post.date,
     dateModified: post.updated,
-    author: { "@type": "Organization", name: "YOLO365", url: SITE },
+    author: {
+      "@type": "Person",
+      "@id": `${SITE}/author/yolo365-editorial-team#person`,
+      name: "YOLO365 Editorial Team",
+      url: `${SITE}/author/yolo365-editorial-team`,
+    },
     publisher: {
       "@type": "Organization",
       name: "YOLO365",
@@ -154,16 +158,19 @@ const BlogPost = () => {
             <div className="flex items-center gap-2 text-[10px] text-muted-foreground uppercase tracking-wider mb-4">
               <span className="text-gold">{post.category}</span>
               <span>·</span>
-              <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{new Date(post.date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}</span>
+              <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />Published {new Date(post.date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}</span>
+              <span>·</span>
+              <span>Updated {new Date(post.updated).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}</span>
               <span>·</span>
               <span className="inline-flex items-center gap-1"><Clock className="w-3 h-3" />{post.readMinutes} min read</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-5">{post.title}</h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{post.excerpt}</p>
+            <p className="mt-4 text-sm text-muted-foreground">By <Link to="/author/yolo365-editorial-team" className="text-gold hover:underline">YOLO365 Editorial Team</Link></p>
           </header>
 
           <figure className="rounded-lg overflow-hidden border hairline mb-10">
-            <img src={post.cover} alt={`${post.title} — yolo365bet24.live blog cover`} className="w-full h-auto" width={1200} height={675} loading="eager" decoding="async" />
+            <img src={post.cover} alt={`${post.category} article featured image`} className="w-full h-auto" width={1200} height={675} loading="eager" decoding="async" />
           </figure>
 
           <div className="text-base">{renderContent(post.content)}</div>
@@ -183,11 +190,11 @@ const BlogPost = () => {
           )}
 
           <aside className="mt-14 p-6 md:p-8 rounded-lg border hairline bg-card/60 text-center">
-            <h2 className="text-xl md:text-2xl font-semibold tracking-tight mb-2">Get your YOLO365 ID in 60 seconds</h2>
-            <p className="text-sm text-muted-foreground mb-5 max-w-md mx-auto">Apply everything in this guide on India's #1 cricket betting exchange. WhatsApp activation, instant INR deposits.</p>
-            <button onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-              <MessageCircle className="w-4 h-4" /> Get my ID on WhatsApp
-            </button>
+            <h2 className="text-xl md:text-2xl font-semibold tracking-tight mb-2">Play responsibly</h2>
+            <p className="text-sm text-muted-foreground mb-5 max-w-md mx-auto">Gaming should be treated as entertainment. Set a budget, take breaks, and never chase losses.</p>
+            <Link to="/responsible-gaming" className="inline-flex items-center justify-center h-11 px-6 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+              Responsible gaming information
+            </Link>
           </aside>
         </article>
 
@@ -198,7 +205,7 @@ const BlogPost = () => {
               {relatedShown.map((r) => (
                 <Link key={r.slug} to={`/blog/${r.slug}`} className="group block">
                   <div className="aspect-[16/9] overflow-hidden rounded-md border hairline mb-3">
-                    <img src={r.cover} alt={`${r.title} — related YOLO365 cricket betting blog post`} loading="lazy" decoding="async" width={400} height={225} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={r.cover} alt={`${r.category} article featured image`} loading="lazy" decoding="async" width={400} height={225} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="text-[10px] text-gold uppercase tracking-wider mb-1">{r.category}</div>
                   <h3 className="text-sm font-semibold leading-snug group-hover:text-gold transition-colors">{r.title}</h3>
