@@ -85,6 +85,7 @@ const Footer = () => {
             <Link to="/blog" className="hover:text-gold transition-colors">Blog</Link>
             <Link to="/terms" className="hover:text-gold transition-colors">Terms</Link>
             <Link to="/privacy" className="hover:text-gold transition-colors">Privacy</Link>
+            <Link to="/refund-policy" className="hover:text-gold transition-colors">Refund Policy</Link>
             <Link to="/responsible-gaming" className="hover:text-gold transition-colors">Responsible Gaming</Link>
             <Link to="/editorial-policy" className="hover:text-gold transition-colors">Editorial Policy</Link>
             <Link to="/author/yolo365-editorial-team" className="hover:text-gold transition-colors">Editorial Team</Link>

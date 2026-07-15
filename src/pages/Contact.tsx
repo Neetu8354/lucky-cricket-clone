@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { openWhatsApp, WHATSAPP_LINK } from "@/lib/wa";
+import { openWhatsApp } from "@/lib/wa";
+import { Link } from "react-router-dom";
 import { MessageCircle, Mail, Clock, Globe2 } from "lucide-react";
 
 const SITE = "https://yolo365bet24.live";
@@ -13,7 +14,7 @@ const Contact = () => {
       "@type": "ContactPage",
       "@id": `${SITE}/contact#webpage`,
       url: `${SITE}/contact`,
-      name: "Contact YOLO365 — 24×7 WhatsApp Support",
+      name: "Contact YOLO365 Support | Customer Help & Account Assistance",
       inLanguage: "en-IN",
     },
     {
@@ -28,27 +29,31 @@ const Contact = () => {
           contactType: "customer support",
           availableLanguage: ["English", "Hindi"],
           areaServed: "IN",
-          contactOption: "TollFree",
-          url: WHATSAPP_LINK,
+          email: "support@yolo365.live",
+          hoursAvailable: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            opens: "00:00",
+            closes: "23:59",
+          },
         },
       ],
     },
   ];
 
   const channels = [
-    { icon: MessageCircle, title: "WhatsApp (fastest)", value: "Tap to chat — replies in <60s", action: openWhatsApp, cta: "Open WhatsApp" },
+    { icon: MessageCircle, title: "WhatsApp support", value: "Use the available chat channel to request support.", action: openWhatsApp, cta: "Open WhatsApp" },
     { icon: Mail, title: "Email", value: "support@yolo365.live", href: "mailto:support@yolo365.live", cta: "Send Email" },
-    { icon: Clock, title: "Hours", value: "24×7 — every day of the year", cta: "" },
+    { icon: Clock, title: "Support hours", value: "24×7 — every day of the year", cta: "" },
     { icon: Globe2, title: "Languages", value: "English & Hindi (हिन्दी)", cta: "" },
   ];
 
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contact YOLO365 — 24×7 WhatsApp Support for Cricket Betting ID"
-        description="Contact YOLO365 customer support 24×7 on WhatsApp for cricket betting ID, deposit, withdrawal, or live casino help. Hindi & English support."
+        title="Contact YOLO365 Support | Customer Help & Account Assistance"
+        description="Contact YOLO365 support for customer help, account assistance, game information, and responsible gaming resources."
         canonical="/contact"
-        keywords="contact YOLO365, YOLO365 customer support, YOLO365 WhatsApp number, YOLO365 helpline India"
         jsonLd={ld}
       />
       <Header />
@@ -59,7 +64,7 @@ const Contact = () => {
 
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Contact <span className="text-gold">YOLO365</span></h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-          24×7 customer support for cricket betting ID, deposits, withdrawals, and live casino queries. WhatsApp is the fastest channel — average reply in 60 seconds.
+          Customer support for account assistance, game information, policy questions, and responsible gaming resources.
         </p>
 
         <section className="grid md:grid-cols-2 gap-5 mb-12">
@@ -83,25 +88,36 @@ const Contact = () => {
           <h2 className="text-2xl font-bold mb-4">What can we help with?</h2>
           <ul className="grid md:grid-cols-2 gap-3 text-sm text-foreground/80">
             {[
-              "Get a new YOLO365 cricket betting ID",
-              "UPI deposit not credited",
-              "Withdrawal status & timelines",
-              "IPL 2026 odds & market questions",
-              "Live casino game rules (Teen Patti, Andar Bahar)",
-              "KYC and account verification",
-              "Bonus & promotion claims",
-              "Responsible gaming & self-exclusion",
+              "Account access and account verification",
+              "Payment-status and processing questions",
+              "Game rules and platform information",
+              "Website navigation and technical issues",
+              "Privacy and policy questions",
+              "Responsible gaming and self-exclusion requests", 
+              "Feedback and complaints", 
+              "Editorial-content corrections",
             ].map((q) => (
               <li key={q} className="p-4 rounded-md border hairline bg-card/30">• {q}</li>
             ))}
           </ul>
         </section>
 
+        <section className="grid md:grid-cols-2 gap-5 mb-12">
+          <div className="rounded-2xl border hairline bg-card/40 p-7">
+            <h2 className="text-xl font-bold mb-3">Support information</h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">Support hours are available 24 hours a day, seven days a week. English and Hindi assistance are available. Processing and response times depend on the request and any verification requirements.</p>
+          </div>
+          <div className="rounded-2xl border hairline bg-card/40 p-7">
+            <h2 className="text-xl font-bold mb-3">Feedback and complaints</h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">Email <a href="mailto:support@yolo365.live" className="text-gold underline">support@yolo365.live</a> with relevant details. You can also review our <Link to="/terms" className="text-gold underline">Terms</Link>, <Link to="/privacy" className="text-gold underline">Privacy Policy</Link>, and <Link to="/responsible-gaming" className="text-gold underline">Responsible Gaming</Link> resources.</p>
+          </div>
+        </section>
+
         <section className="rounded-2xl border hairline bg-card/40 p-8 text-center">
           <h2 className="text-xl font-bold mb-2">Need help right now?</h2>
-          <p className="text-muted-foreground text-sm mb-5">Our team is online 24×7 on WhatsApp.</p>
+          <p className="text-muted-foreground text-sm mb-5">Use the contact channels above to request account or platform assistance.</p>
           <button onClick={openWhatsApp} className="px-7 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
-            Chat on WhatsApp
+            Contact support
           </button>
         </section>
       </main>
